@@ -466,7 +466,7 @@ script = ExtResource("1_x86nl")
 
 [node name="animaciones" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_me8rl")
-animation = &"appear"
+animation = &"dissapear"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

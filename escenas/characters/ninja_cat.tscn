@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://8pj2q8sallba"]
+[gd_scene format=3 uid="uid://8pj2q8sallba"]
 
 [ext_resource type="Texture2D" uid="uid://c7hljsaa6ybgc" path="res://assets/Free/Main Characters/Appearing (96x96).png" id="1_17k84"]
 [ext_resource type="Script" uid="uid://geuqdl7c10rt" path="res://escenas/characters/ninja_cat.gd" id="1_x86nl"]
@@ -314,7 +314,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"double_jump",
-"speed": 5.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -460,21 +460,24 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5obkd"]
 
-[node name="ninja_cat" type="CharacterBody2D"]
+[node name="ninja_cat" type="CharacterBody2D" unique_id=630146276]
 scale = Vector2(2, 2)
 script = ExtResource("1_x86nl")
 
-[node name="animaciones" type="AnimatedSprite2D" parent="."]
+[node name="animaciones" type="AnimatedSprite2D" parent="." unique_id=88071806]
 sprite_frames = SubResource("SpriteFrames_me8rl")
-animation = &"idle"
-frame_progress = 0.13851696
+animation = &"double_jump"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=535128147]
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_5obkd")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=915702086]
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="coyote_timer" type="Timer" parent="." unique_id=878289589]
+wait_time = 0.5
+one_shot = true
 
 [connection signal="animation_finished" from="animaciones" to="." method="_on_animaciones_animation_finished"]

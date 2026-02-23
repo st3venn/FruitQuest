@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://df2ks1jfl2fgq"]
+
+[ext_resource type="PackedScene" uid="uid://8pj2q8sallba" path="res://escenas/characters/ninja_cat.tscn" id="1_0undl"]
+[ext_resource type="PackedScene" uid="uid://yq2nrl7rsm33" path="res://escenas/escenarios/mapa 3.tscn" id="2_3hik7"]
+
+[node name="Node2D" type="Node2D" unique_id=1322925109]
+
+[node name="ninja_cat" parent="." unique_id=15555903 instance=ExtResource("1_0undl")]
+top_level = true
+position = Vector2(258, 0)
+
+[node name="TileMap" parent="." unique_id=58968019 instance=ExtResource("2_3hik7")]
+scale = Vector2(2, 2)

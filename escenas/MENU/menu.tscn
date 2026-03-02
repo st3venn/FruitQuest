@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dovi1radnfasl"]
+
+[ext_resource type="Texture2D" uid="uid://dhftoc4xbp5bv" path="res://IMAGEN/ChatGPT Image 2 de març del 2026, 12_28_31.png" id="1_gxwdk"]
+[ext_resource type="Script" uid="uid://iwo4h6xau1su" path="res://escenas/MENU/menu.gd" id="1_svopc"]
+
+[node name="menu" type="Control" unique_id=1462004538]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_svopc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=372028886]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.56078434, 0.7647059, 0.99607843, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=231074965]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_gxwdk")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1272768942]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -129.0
+offset_top = -204.0
+offset_right = 129.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 17
+
+[node name="jugar" type="Button" parent="ColorRect/VBoxContainer" unique_id=27351867]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "JUGAR"
+
+[node name="salir" type="Button" parent="ColorRect/VBoxContainer" unique_id=485925023]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 50
+text = "SALIR"
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/salir" to="." method="_on_salir_pressed"]

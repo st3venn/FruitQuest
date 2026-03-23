@@ -473,6 +473,7 @@ position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_5obkd")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=915702086]
+limit_bottom = 648
 editor_draw_limits = true
 editor_draw_drag_margin = true
 

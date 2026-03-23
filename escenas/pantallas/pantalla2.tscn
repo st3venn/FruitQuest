@@ -9,4 +9,4 @@
 position = Vector2(577, 227)
 
 [node name="TileMap" parent="." unique_id=474059689 instance=ExtResource("2_qjidq")]
-position = Vector2(240, 208)
+position = Vector2(-14, 190)

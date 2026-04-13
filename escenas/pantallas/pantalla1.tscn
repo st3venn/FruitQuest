@@ -2,9 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://8pj2q8sallba" path="res://escenas/characters/ninja_cat.tscn" id="1_r7qo2"]
 [ext_resource type="PackedScene" uid="uid://cjjkx41raprfy" path="res://escenas/escenarios/mapa 1.tscn" id="2_dx68v"]
+[ext_resource type="PackedScene" uid="uid://b3e21iyuxj8g" path="res://escenas/escenarios/fruit.tscn" id="3_dx68v"]
 
 [node name="Node2D" type="Node2D" unique_id=18950095]
 
 [node name="ninja_cat" parent="." unique_id=630146276 instance=ExtResource("1_r7qo2")]
 
 [node name="TileMap" parent="." unique_id=1150383447 instance=ExtResource("2_dx68v")]
+
+[node name="fruit" parent="." unique_id=861061347 instance=ExtResource("3_dx68v")]
+position = Vector2(766, 277)
+fruitType = "apple"

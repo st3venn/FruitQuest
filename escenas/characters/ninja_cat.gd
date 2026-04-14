@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -450.0
+var fruitCount = 0
 var allow_animation:bool = false
 var leaved_floor: bool = false
 var had_jump: bool = false

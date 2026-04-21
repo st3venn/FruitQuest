@@ -79,11 +79,14 @@ func right_to_jump():
 	elif not $coyote_timer.is_stopped():
 		had_jump = true
 		return true
-
-
+func collectFruit(fruitType):
+	var auxString = fruitType + "Points"
+	var gainedPoints = GeneralRules[auxString]
+	fruitCount += gainedPoints
+	print(fruitCount)
 
 func _on_animaciones_animation_finished():
 	allow_animation = true
 
 func _on_coyote_timer_timeout():
-	print("booom!")
+	print("jump!")

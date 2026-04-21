@@ -17,9 +17,11 @@ func _process(delta):
 	pass
 
 func _on_area_collect_body_entered(body):
-	body.fruitCount += 1
-	print(body.fruitCount)
+	if body.has_method("collectFruit"):
+		body.collectFruit(fruitType)
 	$animations.play("collected")
+
+ 	
 
 
 func _on_animations_animation_finished():

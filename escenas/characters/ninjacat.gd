@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
+var collected = false
 const SPEED = 300.0
 const JUMP_VELOCITY = -450.0
+var health = 100
 var fruitCount = 0
 var allow_animation:bool = false
 var leaved_floor: bool = false
@@ -90,3 +92,11 @@ func _on_animaciones_animation_finished():
 
 func _on_coyote_timer_timeout():
 	print("jump!")
+
+
+
+
+func _on_damage_detection_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int):
+	if area.is_in_group("enemigos"):
+		health -= 10
+		print(health)

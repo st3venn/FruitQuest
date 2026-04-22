@@ -1,6 +1,7 @@
 @tool
 extends Node2D
 
+var collected = false
 
 @export_enum("apple", "banana", "cherry") var fruitType:String = "apple" :
 	set(value):
@@ -17,8 +18,14 @@ func _process(delta):
 	pass
 
 func _on_area_collect_body_entered(body):
+	if collected:
+		return
+	
+	collected = true
+	
 	if body.has_method("collectFruit"):
 		body.collectFruit(fruitType)
+	
 	$animations.play("collected")
 
  	

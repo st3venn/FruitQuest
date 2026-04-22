@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://dajsb5t8xywt8"]
 
+[ext_resource type="PackedScene" uid="uid://tnn1a48mfafh" path="res://escenas/enemigos/sierra.tscn" id="1_hiyro"]
 [ext_resource type="PackedScene" uid="uid://c2j73aka5k1rl" path="res://escenas/characters/ninjacat.tscn" id="2_lt5qp"]
 [ext_resource type="PackedScene" uid="uid://bqsj3fl4xx7wg" path="res://escenas/escenarios/mapa 2.tscn" id="2_qjidq"]
 [ext_resource type="PackedScene" uid="uid://b3e21iyuxj8g" path="res://escenas/escenarios/fruit.tscn" id="3_qjidq"]
 
 [node name="Node2D" type="Node2D" unique_id=2140849104]
 position = Vector2(0, 33)
+
+[node name="sierra" parent="." unique_id=256568043 instance=ExtResource("1_hiyro")]
+position = Vector2(451, 527)
+
+[node name="sierra2" parent="." unique_id=602374408 instance=ExtResource("1_hiyro")]
+position = Vector2(1087, 518)
 
 [node name="TileMap" parent="." unique_id=474059689 instance=ExtResource("2_qjidq")]
 position = Vector2(-14, 170)
@@ -16,3 +23,6 @@ position = Vector2(31, 163)
 [node name="fruit4" parent="." unique_id=1397616176 instance=ExtResource("3_qjidq")]
 position = Vector2(6409, 423)
 fruitType = "cherry"
+
+[node name="sierra3" parent="." unique_id=1735599741 instance=ExtResource("1_hiyro")]
+position = Vector2(2544, 523)

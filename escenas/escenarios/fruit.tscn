@@ -432,7 +432,7 @@ animations = [{
 radius = 8.01561
 
 [node name="fruit" type="Node2D" unique_id=861061347]
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_1dqlx")
 
 [node name="animations" type="AnimatedSprite2D" parent="." unique_id=1360878063]

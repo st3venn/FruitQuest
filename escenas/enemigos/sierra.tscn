@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://tnn1a48mfafh"]
+
+[ext_resource type="Script" uid="uid://ddmbejpwxse3o" path="res://escenas/enemigos/sierra.gd" id="1_x3a0u"]
+[ext_resource type="Texture2D" uid="uid://xt26fc7gkv0u" path="res://assets/Free/Traps/Saw/On (38x38).png" id="2_fsmv1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1apw"]
+atlas = ExtResource("2_fsmv1")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpvrg"]
+atlas = ExtResource("2_fsmv1")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxyxj"]
+atlas = ExtResource("2_fsmv1")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shetm"]
+atlas = ExtResource("2_fsmv1")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qttw4"]
+atlas = ExtResource("2_fsmv1")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4tj1"]
+atlas = ExtResource("2_fsmv1")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umb1h"]
+atlas = ExtResource("2_fsmv1")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vubva"]
+atlas = ExtResource("2_fsmv1")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_atdi6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1apw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpvrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxyxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shetm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qttw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4tj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umb1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vubva")
+}],
+"loop": true,
+"name": &"on",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o08mw"]
+size = Vector2(16.5, 4.75)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x3a0u"]
+radius = 19.104973
+
+[node name="sierra" type="CharacterBody2D" unique_id=256568043]
+collision_layer = 2
+script = ExtResource("1_x3a0u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=14983221]
+sprite_frames = SubResource("SpriteFrames_atdi6")
+animation = &"on"
+autoplay = "on"
+frame = 4
+frame_progress = 0.99907696
+
+[node name="colision_with_floor" type="CollisionShape2D" parent="." unique_id=644213168]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_o08mw")
+
+[node name="raycast_floor_detection" type="RayCast2D" parent="." unique_id=1690646602]
+position = Vector2(20, -5)
+target_position = Vector2(0, 8)
+
+[node name="raycast_wall_detection" type="RayCast2D" parent="." unique_id=1452130911]
+target_position = Vector2(20, 0)
+
+[node name="damge_zone" type="Area2D" parent="." unique_id=1666154683]
+collision_layer = 2
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damge_zone" unique_id=1415229608]
+shape = SubResource("CircleShape2D_x3a0u")

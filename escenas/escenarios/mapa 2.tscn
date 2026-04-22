@@ -215,8 +215,9 @@ layer_0/tile_data = PackedInt32Array(786432, 393216, 0, 851968, 393216, 1, 91750
 motion_mirroring = Vector2(1150, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1937290889]
-position = Vector2(-4, 3)
-scale = Vector2(1.6472651, 2.5389104)
+top_level = true
+position = Vector2(0, -441.00003)
+scale = Vector2(1.6472651, 4.266537)
 texture = ExtResource("3_ko0e1")
 centered = false
 

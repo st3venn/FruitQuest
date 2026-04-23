@@ -329,7 +329,7 @@ position = Vector2(3592, 362)
 fruitType = "banana"
 
 [node name="fruit32" parent="." unique_id=1226716625 instance=ExtResource("4_ltv4i")]
-position = Vector2(3639, 360)
+position = Vector2(3641, 307)
 fruitType = "banana"
 
 [node name="fruit33" parent="." unique_id=405191521 instance=ExtResource("4_ltv4i")]

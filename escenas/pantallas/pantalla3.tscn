@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://df2ks1jfl2fgq"]
 
+[ext_resource type="PackedScene" uid="uid://tnn1a48mfafh" path="res://escenas/enemigos/sierra.tscn" id="1_o2gdr"]
 [ext_resource type="PackedScene" uid="uid://c2j73aka5k1rl" path="res://escenas/characters/ninjacat.tscn" id="2_0undl"]
 [ext_resource type="PackedScene" uid="uid://yq2nrl7rsm33" path="res://escenas/escenarios/mapa 3.tscn" id="2_3hik7"]
 [ext_resource type="PackedScene" uid="uid://b3e21iyuxj8g" path="res://escenas/escenarios/fruit.tscn" id="3_3hik7"]
 
 [node name="Node2D" type="Node2D" unique_id=1322925109]
 position = Vector2(0, -413)
+
+[node name="sierra" parent="." unique_id=256568043 instance=ExtResource("1_o2gdr")]
+position = Vector2(1335, 396)
 
 [node name="TileMap" parent="." unique_id=58968019 instance=ExtResource("2_3hik7")]
 scale = Vector2(2, 2)

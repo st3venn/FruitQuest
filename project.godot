@@ -23,6 +23,10 @@ config/icon="res://icon.svg"
 
 GeneralRules="*uid://c3xteribjwc5s"
 
+[layer_names]
+
+2d_physics/layer_2="enemys"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

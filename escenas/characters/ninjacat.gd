@@ -97,6 +97,6 @@ func _on_coyote_timer_timeout():
 
 
 func _on_damage_detection_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int):
-	if area.is_in_group("enemigos"):
+	if area.is_in_group("daño"): 
 		health -= 10
 		print(health)

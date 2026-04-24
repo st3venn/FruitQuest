@@ -5,7 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://c2j73aka5k1rl" path="res://escenas/characters/ninjacat.tscn" id="3_iioxt"]
 [ext_resource type="PackedScene" uid="uid://tnn1a48mfafh" path="res://escenas/enemigos/sierra.tscn" id="4_iioxt"]
 
-[node name="Node2D" type="Node2D" unique_id=18950095]
+[node name="Node2D2" type="Node2D" unique_id=18950095]
+
+[node name="ninjacat" parent="." unique_id=571372543 instance=ExtResource("3_iioxt")]
+position = Vector2(32, 88)
 
 [node name="sierra" parent="." unique_id=256568043 instance=ExtResource("4_iioxt")]
 position = Vector2(1631, 157)
@@ -21,9 +24,6 @@ position = Vector2(766, 277)
 position = Vector2(-145.33333, -13.333328)
 scale = Vector2(1, 1)
 fruitType = "banana"
-
-[node name="ninjacat" parent="." unique_id=571372543 instance=ExtResource("3_iioxt")]
-position = Vector2(32, 88)
 
 [node name="fruit3" parent="." unique_id=560984082 instance=ExtResource("3_dx68v")]
 position = Vector2(1583, 9)

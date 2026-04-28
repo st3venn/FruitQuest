@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cd41woj0pbi3i"]
+
+[ext_resource type="Texture2D" uid="uid://i0rbhbv1usl8" path="res://assets/Free/Traps/Spiked Ball/Chain.png" id="1_wb8ia"]
+[ext_resource type="Texture2D" uid="uid://cs8qdcsnq0g8b" path="res://assets/Free/Traps/Spiked Ball/Spiked Ball.png" id="2_il0nj"]
+
+[node name="SpikeBall" type="Node2D" unique_id=1361933566]
+
+[node name="Chain" type="Sprite2D" parent="." unique_id=1559408546]
+texture = ExtResource("1_wb8ia")
+
+[node name="SpikedBall" type="Sprite2D" parent="." unique_id=2143202170]
+position = Vector2(0, 29)
+scale = Vector2(2, 2)
+texture = ExtResource("2_il0nj")

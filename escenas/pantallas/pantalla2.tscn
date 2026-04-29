@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://c2j73aka5k1rl" path="res://escenas/characters/ninjacat.tscn" id="2_lt5qp"]
 [ext_resource type="PackedScene" uid="uid://bqsj3fl4xx7wg" path="res://escenas/escenarios/mapa 2.tscn" id="2_qjidq"]
 [ext_resource type="PackedScene" uid="uid://b3e21iyuxj8g" path="res://escenas/escenarios/fruit.tscn" id="3_qjidq"]
-[ext_resource type="PackedScene" uid="uid://cd41woj0pbi3i" path="res://escenas/enemigos/spike_ball.tscn" id="5_byhf8"]
 
 [node name="Node2D" type="Node2D" unique_id=2140849104]
 position = Vector2(0, 33)
@@ -29,15 +28,3 @@ position = Vector2(1077, 508)
 [node name="fruit4" parent="." unique_id=1397616176 instance=ExtResource("3_qjidq")]
 position = Vector2(6409, 423)
 fruitType = "cherry"
-
-[node name="SpikeBall" parent="." unique_id=1361933566 instance=ExtResource("5_byhf8")]
-position = Vector2(905, 333)
-
-[node name="SpikeBall2" parent="." unique_id=1699264685 instance=ExtResource("5_byhf8")]
-position = Vector2(1420, 329)
-
-[node name="SpikeBall3" parent="." unique_id=743774256 instance=ExtResource("5_byhf8")]
-position = Vector2(4776, 343)
-
-[node name="SpikeBall4" parent="." unique_id=1929130941 instance=ExtResource("5_byhf8")]
-position = Vector2(5146, 343)

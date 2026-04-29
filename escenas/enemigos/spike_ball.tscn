@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cd41woj0pbi3i"]
 
 [ext_resource type="Script" uid="uid://g7xfxov8ken4" path="res://escenas/enemigos/spike_ball.gd" id="1_il0nj"]
-[ext_resource type="Texture2D" uid="uid://i0rbhbv1usl8" path="res://assets/Free/Traps/Spiked Ball/Chain.png" id="1_wb8ia"]
+[ext_resource type="PackedScene" uid="uid://jbwbta7er8cn" path="res://escenas/enemigos/One_chain.tscn" id="2_4asl6"]
 [ext_resource type="Texture2D" uid="uid://cs8qdcsnq0g8b" path="res://assets/Free/Traps/Spiked Ball/Spiked Ball.png" id="2_il0nj"]
 
 [sub_resource type="GDScript" id="GDScript_4asl6"]
@@ -21,8 +21,7 @@ func _process(delta: float) -> void:
 [node name="SpikeBall" type="Node2D" unique_id=1361933566]
 script = ExtResource("1_il0nj")
 
-[node name="Chain" type="Sprite2D" parent="." unique_id=1559408546]
-texture = ExtResource("1_wb8ia")
+[node name="Chain2" parent="." unique_id=1198488404 instance=ExtResource("2_4asl6")]
 
 [node name="SpikedBall" type="Sprite2D" parent="." unique_id=2143202170]
 position = Vector2(0, 29)
@@ -31,4 +30,8 @@ texture = ExtResource("2_il0nj")
 script = SubResource("GDScript_4asl6")
 
 [node name="raycast_floor_detection" type="RayCast2D" parent="." unique_id=915710641]
-target_position = Vector2(0, 30)
+target_position = Vector2(0, 34)
+
+[node name="safeTime" type="Timer" parent="." unique_id=936262463]
+
+[connection signal="timeout" from="safeTime" to="." method="_on_safe_time_timeout"]

@@ -110,7 +110,7 @@ position = Vector2(206, 702)
 position = Vector2(114, 408)
 
 [node name="SpikeBall" parent="." unique_id=1361933566 instance=ExtResource("5_m3dfu")]
-position = Vector2(1633, 628)
+position = Vector2(1457, 429)
 
 [node name="SpikeBall2" parent="." unique_id=1051196359 instance=ExtResource("5_m3dfu")]
 position = Vector2(209, 502)

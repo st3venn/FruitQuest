@@ -18,10 +18,54 @@ func _process(delta: float) -> void:
 	pass
 "
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_il0nj"]
+radius = 25.079872
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4asl6"]
+radius = 25.019993
+
+[sub_resource type="Animation" id="Animation_4asl6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_hh4xe"]
+resource_name = "regular_move"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_in30g"]
+_data = {
+&"RESET": SubResource("Animation_4asl6"),
+&"regular_move": SubResource("Animation_hh4xe")
+}
+
 [node name="SpikeBall" type="Node2D" unique_id=1361933566]
 script = ExtResource("1_il0nj")
 
-[node name="Chain2" parent="." unique_id=1198488404 instance=ExtResource("2_4asl6")]
+[node name="OneChain" parent="." unique_id=1198488404 instance=ExtResource("2_4asl6")]
 
 [node name="SpikedBall" type="Sprite2D" parent="." unique_id=2143202170]
 position = Vector2(0, 29)
@@ -29,9 +73,29 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_il0nj")
 script = SubResource("GDScript_4asl6")
 
+[node name="Area_colision_with_map" type="Area2D" parent="SpikedBall" unique_id=689520585]
+position = Vector2(0, -14.5)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikedBall/Area_colision_with_map" unique_id=108433750]
+position = Vector2(0, 30)
+shape = SubResource("CircleShape2D_il0nj")
+
+[node name="damage_zone" type="Area2D" parent="SpikedBall/Area_colision_with_map" unique_id=438282942]
+collision_layer = 2
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikedBall/Area_colision_with_map/damage_zone" unique_id=33107493]
+position = Vector2(0, 30)
+shape = SubResource("CircleShape2D_4asl6")
+
 [node name="raycast_floor_detection" type="RayCast2D" parent="." unique_id=915710641]
 target_position = Vector2(0, 34)
 
 [node name="safeTime" type="Timer" parent="." unique_id=936262463]
 
+[node name="animation_rotation" type="AnimationPlayer" parent="." unique_id=1331246006]
+libraries/ = SubResource("AnimationLibrary_in30g")
+
+[connection signal="body_entered" from="SpikedBall/Area_colision_with_map" to="." method="_on_area_colision_with_map_body_entered"]
 [connection signal="timeout" from="safeTime" to="." method="_on_safe_time_timeout"]

@@ -13,7 +13,6 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-@warning_ignore("unused_parameter")
 func _process(delta):
 	if not floorDetected && safeTimeOut:
 		$raycast_floor_detection.target_position.y += 5
@@ -36,6 +35,5 @@ func init_spikeball():
 func _on_safe_time_timeout():
 	safeTimeOut = true
 
-@warning_ignore("unused_parameter")
 func _on_area_colision_with_map_body_entered(body):
 	$animation_rotation.speed_scale *= -1

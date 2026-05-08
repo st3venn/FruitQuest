@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bifhpjfg00vg6"]
+
+[ext_resource type="Script" uid="uid://ber6p3vwdkpei" path="res://escenas/pantallas/playerinfo.gd" id="1_hugun"]
+
+[node name="playerinfo" type="CanvasLayer" unique_id=1886381284]
+script = ExtResource("1_hugun")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1401274641]
+offset_top = -95.0
+offset_right = 1151.0
+offset_bottom = 40.0
+color = Color(1, 1, 0.84705883, 1)
+
+[node name="health_ProgressBar" type="ProgressBar" parent="." unique_id=1019438039]
+offset_left = 57.0
+offset_top = 3.0
+offset_right = 230.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.9490196, 1, 0.38431373, 1)
+step = 1.0
+
+[node name="Label" type="Label" parent="health_ProgressBar" unique_id=931400291]
+layout_mode = 0
+offset_left = -51.0
+offset_top = 2.0
+offset_right = 206.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+text = "Vida: "

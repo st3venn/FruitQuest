@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ber6p3vwdkpei" path="res://escenas/pantallas/playerinfo.gd" id="1_hugun"]
 
 [node name="playerinfo" type="CanvasLayer" unique_id=1886381284]
+process_mode = 3
 script = ExtResource("1_hugun")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1401274641]
@@ -35,3 +36,60 @@ offset_right = 816.0
 offset_bottom = 29.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
+
+[node name="MenuButton" type="Button" parent="." unique_id=1432598409]
+offset_left = 1014.0
+offset_top = 2.0
+offset_right = 1104.0
+offset_bottom = 29.0
+text = "MENU"
+
+[node name="MenuPopUp" type="Node2D" parent="." unique_id=234354776]
+
+[node name="ColorRect" type="ColorRect" parent="MenuPopUp" unique_id=1393070508]
+offset_left = 491.0
+offset_top = 120.0
+offset_right = 629.0
+offset_bottom = 142.0
+
+[node name="Label" type="Label" parent="MenuPopUp" unique_id=802122727]
+offset_left = 495.0
+offset_top = 120.0
+offset_right = 642.0
+offset_bottom = 143.0
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+text = "JUEGO PAUSADO"
+
+[node name="Reanudar" type="Button" parent="MenuPopUp" unique_id=735189516]
+offset_left = 482.0
+offset_top = 172.0
+offset_right = 647.0
+offset_bottom = 215.0
+text = "Reanudar"
+
+[node name="Sonido" type="Button" parent="MenuPopUp" unique_id=1006841814]
+offset_left = 483.0
+offset_top = 249.0
+offset_right = 648.0
+offset_bottom = 292.0
+text = "Sonido"
+
+[node name="Musica" type="Button" parent="MenuPopUp" unique_id=69134079]
+offset_left = 483.0
+offset_top = 321.0
+offset_right = 648.0
+offset_bottom = 364.0
+text = "Musica"
+
+[node name="Reiniciar" type="Button" parent="MenuPopUp" unique_id=1552700299]
+offset_left = 484.0
+offset_top = 395.0
+offset_right = 649.0
+offset_bottom = 438.0
+text = "Reiniciar"
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="MenuPopUp/Reanudar" to="." method="_on_reanudar_pressed"]
+[connection signal="pressed" from="MenuPopUp/Sonido" to="." method="_on_sonido_pressed"]
+[connection signal="pressed" from="MenuPopUp/Musica" to="." method="_on_musica_pressed"]
+[connection signal="pressed" from="MenuPopUp/Reiniciar" to="." method="_on_reiniciar_pressed"]

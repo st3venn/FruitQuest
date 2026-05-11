@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://cimtkodp7212a" path="res://escenas/pantallas/siguientenivel.gd" id="7_l4qrl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cukit"]
-size = Vector2(37, 84)
+size = Vector2(21.25, 18)
 
 [node name="Node2D" type="Node2D" unique_id=2140849104]
 position = Vector2(0, 33)
@@ -56,7 +56,18 @@ script = ExtResource("7_l4qrl")
 next_scene_path = "res://escenas/pantallas/pantalla3.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=875917493]
-position = Vector2(6408, 420)
+position = Vector2(6153.375, 423)
+shape = SubResource("RectangleShape2D_cukit")
+
+[node name="Area2D2" type="Area2D" parent="Area2D2" unique_id=1861823560]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("7_l4qrl")
+next_scene_path = "res://escenas/pantallas/pantalla3.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2/Area2D2" unique_id=1167426551]
+position = Vector2(6408, 425)
 shape = SubResource("RectangleShape2D_cukit")
 
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D2/Area2D2" to="Area2D2/Area2D2" method="_on_body_entered"]

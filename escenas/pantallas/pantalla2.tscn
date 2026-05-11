@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://b3e21iyuxj8g" path="res://escenas/escenarios/fruit.tscn" id="3_qjidq"]
 [ext_resource type="PackedScene" uid="uid://cd41woj0pbi3i" path="res://escenas/enemigos/spike_ball.tscn" id="5_byhf8"]
 [ext_resource type="PackedScene" uid="uid://bifhpjfg00vg6" path="res://escenas/pantallas/playerinfo.tscn" id="6_yjn75"]
+[ext_resource type="Script" uid="uid://cimtkodp7212a" path="res://escenas/pantallas/siguientenivel.gd" id="7_l4qrl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cukit"]
+size = Vector2(37, 84)
 
 [node name="Node2D" type="Node2D" unique_id=2140849104]
 position = Vector2(0, 33)
@@ -44,3 +48,15 @@ position = Vector2(4798, 350)
 position = Vector2(5148, 348)
 
 [node name="playerinfo" parent="." unique_id=1886381284 instance=ExtResource("6_yjn75")]
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=33156761]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("7_l4qrl")
+next_scene_path = "res://escenas/pantallas/pantalla3.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=875917493]
+position = Vector2(6408, 420)
+shape = SubResource("RectangleShape2D_cukit")
+
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]

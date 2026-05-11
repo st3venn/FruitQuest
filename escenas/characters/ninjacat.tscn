@@ -466,14 +466,13 @@ script = ExtResource("1_qp17o")
 [node name="animaciones" type="AnimatedSprite2D" parent="." unique_id=1185125793]
 position = Vector2(1, 2)
 sprite_frames = SubResource("SpriteFrames_2evan")
-animation = &"double_jump"
+animation = &"idle"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=365858939]
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=650736280]
-visible = false
 polygon = PackedVector2Array(-4, 18, -3, 18, -2, 17, -1, 15, 5, 15, 5, 17, 6, 18, 7, 18, 9, 16, 9, 14, 11, 14, 12, 13, 12, 11, 10, 9, 12, 7, 12, -2, 11, -3, 11, -5, 9, -7, 6, -7, 4, -5, 4, -4, -1, -4, -3, -6, -6, -6, -8, -5, -8, -3, -9, -2, -9, 7, -7, 9, -9, 11, -9, 12, -8, 14, -6, 14, -6, 17, -5, 18)
 
 [node name="coyote_timer" type="Timer" parent="." unique_id=1123746384]
@@ -485,7 +484,10 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="damage_detection" unique_id=202653912]
-polygon = PackedVector2Array(-9.5, 0.5, -9.5, -2, -6, -5.5, -1, -5.5, 1.5, -8, 10, -8, 13.5, -7, 14.5, -3.5, 12, -1, 11, 5.5, 13.5, 6.5, 14, 8.5, 12.5, 10.5, 10.5, 11.5, 0.5, 11.5, -3.5, 12.5, -4.5, 10.5, -9, 9.5, -9.5, 6.5, -8, 4.5, -7, 1)
+position = Vector2(-1, 7.5000005)
+rotation = -1.5423768
+scale = Vector2(0.9833839, 0.9996222)
+polygon = PackedVector2Array(-10.716448, -1.2014828, -10.788689, -3.7014177, -5.29915, -7.357672, -1, -5.5, 1.5, -8, 10, -8, 13.5, -7, 14.5, -3.5, 12, -1, 11, 5.5, 14.941322, 6.587633, 14.50532, 9.101782, 12.5, 10.5, 11.034306, 12.201197, 0.3611989, 12.499675, -4.2129893, 12.627594, -5.2439237, 12.1560335, -9, 9.5, -9.5, 6.5, -8, 4.5, -7, 1)
 
 [connection signal="animation_finished" from="animaciones" to="." method="_on_animaciones_animation_finished"]
 [connection signal="timeout" from="coyote_timer" to="." method="_on_coyote_timer_timeout"]

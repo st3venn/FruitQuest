@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://yq2nrl7rsm33" path="res://escenas/escenarios/mapa 3.tscn" id="2_3hik7"]
 [ext_resource type="PackedScene" uid="uid://b3e21iyuxj8g" path="res://escenas/escenarios/fruit.tscn" id="3_3hik7"]
 [ext_resource type="PackedScene" uid="uid://cd41woj0pbi3i" path="res://escenas/enemigos/spike_ball.tscn" id="5_m3dfu"]
+[ext_resource type="PackedScene" uid="uid://bifhpjfg00vg6" path="res://escenas/pantallas/playerinfo.tscn" id="6_8n2vf"]
 
 [node name="Node2D" type="Node2D" unique_id=1322925109]
 position = Vector2(0, -413)
@@ -114,3 +115,5 @@ position = Vector2(1457, 429)
 
 [node name="SpikeBall2" parent="." unique_id=1051196359 instance=ExtResource("5_m3dfu")]
 position = Vector2(209, 502)
+
+[node name="playerinfo" parent="." unique_id=1886381284 instance=ExtResource("6_8n2vf")]

@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cd41woj0pbi3i" path="res://escenas/enemigos/spike_ball.tscn" id="5_il1dr"]
 [ext_resource type="PackedScene" uid="uid://bifhpjfg00vg6" path="res://escenas/pantallas/playerinfo.tscn" id="6_y7j5o"]
 [ext_resource type="Script" uid="uid://cimtkodp7212a" path="res://escenas/pantallas/siguientenivel.gd" id="7_3g6fp"]
+[ext_resource type="AudioStream" uid="uid://kqc16cldw1jj" path="res://sonidos/pixel-song-19-31953_junta.mp3" id="8_suyv3"]
+[ext_resource type="Script" uid="uid://cyp28c8beplgm" path="res://escenas/pantallas/audio_fondo.gd" id="9_plxbb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3g6fp"]
 size = Vector2(37, 84)
@@ -110,4 +112,11 @@ next_scene_path = "res://escenas/pantallas/pantalla2.tscn"
 position = Vector2(2693.5, 354)
 shape = SubResource("RectangleShape2D_3g6fp")
 
+[node name="audio_fondo" type="AudioStreamPlayer" parent="." unique_id=966196380]
+stream = ExtResource("8_suyv3")
+volume_db = -16.421
+autoplay = true
+script = ExtResource("9_plxbb")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="finished" from="audio_fondo" to="audio_fondo" method="_on_finished"]

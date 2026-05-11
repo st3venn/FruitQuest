@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://b72fh12hoiew0" path="res://assets/Free/Main Characters/Pink Man/Jump (32x32).png" id="7_5jme2"]
 [ext_resource type="Texture2D" uid="uid://bkdfxyyl20onc" path="res://assets/Free/Main Characters/Pink Man/Run (32x32).png" id="8_gp4q6"]
 [ext_resource type="Texture2D" uid="uid://baufsvm0trc45" path="res://assets/Free/Main Characters/Pink Man/Wall Jump (32x32).png" id="9_2rfly"]
+[ext_resource type="AudioStream" uid="uid://67dkd5lb4uk7" path="res://sonidos/cartoon-jump-6462.mp3" id="11_1r64d"]
+[ext_resource type="AudioStream" uid="uid://b7y3ddvmrsheh" path="res://sonidos/woo-hoo-82843.mp3" id="12_q3g6m"]
+[ext_resource type="AudioStream" uid="uid://dft4uo5ghqc0l" path="res://sonidos/homemadeoof-47509.mp3" id="13_5jme2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qfeqe"]
 atlas = ExtResource("1_mahm0")
@@ -91,33 +94,33 @@ region = Rect2(128, 0, 32, 32)
 atlas = ExtResource("3_be3ik")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t583s"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdfft"]
 atlas = ExtResource("4_6bn1y")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_usuk1"]
-atlas = ExtResource("4_6bn1y")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d0beb"]
-atlas = ExtResource("4_6bn1y")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bxxmk"]
 atlas = ExtResource("4_6bn1y")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qdfft"]
-atlas = ExtResource("4_6bn1y")
-region = Rect2(128, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_55xla"]
 atlas = ExtResource("4_6bn1y")
 region = Rect2(160, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0beb"]
+atlas = ExtResource("4_6bn1y")
+region = Rect2(64, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5sw5"]
 atlas = ExtResource("4_6bn1y")
 region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usuk1"]
+atlas = ExtResource("4_6bn1y")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t583s"]
+atlas = ExtResource("4_6bn1y")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h6xun"]
 atlas = ExtResource("5_1r64d")
@@ -318,27 +321,42 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t583s")
+"texture": SubResource("AtlasTexture_qdfft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxxmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55xla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0beb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5sw5")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_usuk1")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_t583s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxxmk")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_d0beb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55xla")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bxxmk")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qdfft")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_55xla")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q5sw5")
 }],
-"loop": true,
+"loop": false,
 "name": &"hit",
 "speed": 15.0
 }, {
@@ -466,7 +484,7 @@ script = ExtResource("1_qp17o")
 [node name="animaciones" type="AnimatedSprite2D" parent="." unique_id=1185125793]
 position = Vector2(1, 2)
 sprite_frames = SubResource("SpriteFrames_2evan")
-animation = &"idle"
+animation = &"hit"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=365858939]
 editor_draw_limits = true
@@ -488,6 +506,15 @@ position = Vector2(-1, 7.5000005)
 rotation = -1.5423768
 scale = Vector2(0.9833839, 0.9996222)
 polygon = PackedVector2Array(-10.716448, -1.2014828, -10.788689, -3.7014177, -5.29915, -7.357672, -1, -5.5, 1.5, -8, 10, -8, 13.5, -7, 14.5, -3.5, 12, -1, 11, 5.5, 14.941322, 6.587633, 14.50532, 9.101782, 12.5, 10.5, 11.034306, 12.201197, 0.3611989, 12.499675, -4.2129893, 12.627594, -5.2439237, 12.1560335, -9, 9.5, -9.5, 6.5, -8, 4.5, -7, 1)
+
+[node name="audio_jump" type="AudioStreamPlayer2D" parent="." unique_id=1986470250]
+stream = ExtResource("11_1r64d")
+
+[node name="audioDoublejump" type="AudioStreamPlayer2D" parent="." unique_id=93683005]
+stream = ExtResource("12_q3g6m")
+
+[node name="audioDamage" type="AudioStreamPlayer2D" parent="." unique_id=182838589]
+stream = ExtResource("13_5jme2")
 
 [connection signal="animation_finished" from="animaciones" to="." method="_on_animaciones_animation_finished"]
 [connection signal="timeout" from="coyote_timer" to="." method="_on_coyote_timer_timeout"]

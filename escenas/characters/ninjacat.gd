@@ -37,6 +37,9 @@ func _physics_process(delta):
 		if count_jumps == 1:
 			allow_animation = false
 			$animaciones.play("double_jump")
+			$audioDoublejump.play()
+		else:
+			$audio_jump.play()
 		count_jumps += 1
 		velocity.y = JUMP_VELOCITY
 
@@ -86,6 +89,7 @@ func collectFruit(fruitType):
 	var gainedPoints = GeneralRules[auxString]
 	fruitCount += gainedPoints
 	print(fruitCount)
+	$audioDoublejump.play()
 
 func _on_animaciones_animation_finished():
 	allow_animation = true
@@ -97,5 +101,8 @@ func _on_coyote_timer_timeout():
 
 
 func _on_damage_detection_area_shape_entered(_area_rid, _area, _area_shape_index, _local_shape_index):
+		$audioDamage.play()
+		allow_animation = false
+		$animaciones.play("hit")
 		health -= 10
 		print(health)

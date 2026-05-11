@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://cyp28c8beplgm" path="res://escenas/pantallas/audio_fondo.gd" id="9_plxbb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3g6fp"]
-size = Vector2(37, 84)
+size = Vector2(26.25, 36)
 
 [node name="pantalla1" type="Node2D" unique_id=18950095]
 
@@ -109,7 +109,7 @@ script = ExtResource("7_3g6fp")
 next_scene_path = "res://escenas/pantallas/pantalla2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1194353007]
-position = Vector2(2693.5, 354)
+position = Vector2(2699, 378)
 shape = SubResource("RectangleShape2D_3g6fp")
 
 [node name="audio_fondo" type="AudioStreamPlayer" parent="." unique_id=966196380]

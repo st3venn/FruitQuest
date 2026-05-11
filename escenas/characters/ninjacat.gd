@@ -103,6 +103,7 @@ func _on_coyote_timer_timeout():
 func _on_damage_detection_area_shape_entered(_area_rid, _area, _area_shape_index, _local_shape_index):
 		$audioDamage.play()
 		allow_animation = false
+		velocity.y = -150
 		$animaciones.play("hit")
 		health -= 10
 		print(health)

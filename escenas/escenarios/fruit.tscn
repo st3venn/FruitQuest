@@ -442,7 +442,7 @@ sprite_frames = SubResource("SpriteFrames_hcdwu")
 animation = &"collected"
 
 [node name="area_collect" type="Area2D" parent="." unique_id=1542835724]
-collision_layer = 16777215
+collision_layer = 16777213
 collision_mask = 16777215
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_collect" unique_id=1935554010]

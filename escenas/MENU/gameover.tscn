@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://slrtwgvcpfs8"]
+
+[ext_resource type="Script" uid="uid://j531qpq4oiob" path="res://escenas/MENU/gameover.gd" id="1_vlnjk"]
+[ext_resource type="Texture2D" uid="uid://csxv2d05a40nb" path="res://escenas/MENU/game over.png" id="2_b2yda"]
+
+[node name="gameover" type="Control" unique_id=1828105554]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vlnjk")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=108128720]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.56078434, 0.7647059, 0.99607843, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=999652472]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_b2yda")
+expand_mode = 1
+
+[node name="reiniciar" type="Button" parent="ColorRect" unique_id=2012544364]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 349.0
+offset_right = 361.0
+offset_bottom = 426.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "REINICIAR"
+
+[node name="salir" type="Button" parent="ColorRect" unique_id=1199427549]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 356.0
+offset_right = 993.0
+offset_bottom = 433.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 50
+text = "SALIR"
+
+[connection signal="pressed" from="ColorRect/reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="ColorRect/salir" to="." method="_on_salir_pressed"]

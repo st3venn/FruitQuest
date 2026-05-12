@@ -13,6 +13,66 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uicjo"]
 size = Vector2(29, 25)
 
+[sub_resource type="GDScript" id="GDScript_pmhrg"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1w80"]
+size = Vector2(1664, 14)
+
+[sub_resource type="GDScript" id="GDScript_bs3y2"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lv84l"]
+size = Vector2(86.0625, 14)
+
+[sub_resource type="GDScript" id="GDScript_qglyw"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7v4n"]
+size = Vector2(156.25, 13.5)
+
+[sub_resource type="GDScript" id="GDScript_12app"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h607g"]
+size = Vector2(63.625, 13)
+
+[sub_resource type="GDScript" id="GDScript_obmtd"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6iho6"]
+size = Vector2(28.75, 12)
+
 [node name="Node2D" type="Node2D" unique_id=1322925109]
 position = Vector2(0, -413)
 
@@ -166,5 +226,65 @@ autoplay = true
 bus = &"musicabus"
 script = ExtResource("9_h1w80")
 
+[node name="pinchos" type="Area2D" parent="." unique_id=1327037420]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_pmhrg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos" unique_id=1031563572]
+position = Vector2(863, 1032)
+shape = SubResource("RectangleShape2D_h1w80")
+
+[node name="pinchos2" type="Area2D" parent="." unique_id=1012336993]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_bs3y2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos2" unique_id=1297960310]
+position = Vector2(172.96875, 872)
+shape = SubResource("RectangleShape2D_lv84l")
+
+[node name="pinchos3" type="Area2D" parent="." unique_id=1978500207]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_qglyw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos3" unique_id=594135853]
+position = Vector2(1936, 935.75)
+shape = SubResource("RectangleShape2D_d7v4n")
+
+[node name="pinchos4" type="Area2D" parent="." unique_id=108158149]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_12app")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos4" unique_id=1933799310]
+position = Vector2(801.8125, 872.5)
+shape = SubResource("RectangleShape2D_h607g")
+
+[node name="pinchos5" type="Area2D" parent="." unique_id=1281463528]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_obmtd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos5" unique_id=529078599]
+position = Vector2(655, 135)
+shape = SubResource("RectangleShape2D_6iho6")
+
+[node name="pinchos6" type="Area2D" parent="." unique_id=366209827]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_obmtd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos6" unique_id=634628836]
+position = Vector2(1551.375, 840)
+shape = SubResource("RectangleShape2D_6iho6")
+
 [connection signal="body_entered" from="playerinfo/Area2D2" to="playerinfo/Area2D2" method="_on_body_entered"]
 [connection signal="finished" from="audio_fondo" to="audio_fondo" method="_on_finished"]
+[connection signal="body_entered" from="pinchos" to="pinchos" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos2" to="pinchos2" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos3" to="pinchos3" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos4" to="pinchos4" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos5" to="pinchos5" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos6" to="pinchos6" method="_on_body_entered"]

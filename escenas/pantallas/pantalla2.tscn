@@ -13,6 +13,126 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cukit"]
 size = Vector2(21.25, 18)
 
+[sub_resource type="GDScript" id="GDScript_bssty"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1ko6"]
+size = Vector2(113, 7)
+
+[sub_resource type="GDScript" id="GDScript_tffuq"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqsok"]
+size = Vector2(46.53125, 5.75)
+
+[sub_resource type="GDScript" id="GDScript_13usj"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vw02"]
+size = Vector2(28.132813, 8.5)
+
+[sub_resource type="GDScript" id="GDScript_e1ko6"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tffuq"]
+size = Vector2(15.125, 6.75)
+
+[sub_resource type="GDScript" id="GDScript_gqsok"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13usj"]
+size = Vector2(4052.0625, 8.75)
+
+[sub_resource type="GDScript" id="GDScript_7vw02"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36rfh"]
+size = Vector2(173.98828, 6.625)
+
+[sub_resource type="GDScript" id="GDScript_b5csk"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7o7l4"]
+size = Vector2(47.40625, 6.375)
+
+[sub_resource type="GDScript" id="GDScript_c4f0x"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4d7c"]
+size = Vector2(79.0625, 7)
+
+[sub_resource type="GDScript" id="GDScript_c4asx"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyfn7"]
+size = Vector2(60.5625, 7)
+
+[sub_resource type="GDScript" id="GDScript_r076f"]
+script/source = "extends Area2D
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"player\"):
+		print(\"Daño causado\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tsl7"]
+size = Vector2(90.3125, 7.5)
+
 [node name="Node2D" type="Node2D" unique_id=2140849104]
 position = Vector2(0, 33)
 
@@ -79,6 +199,326 @@ autoplay = true
 bus = &"musicabus"
 script = ExtResource("9_e1ko6")
 
+[node name="pinchos" type="Area2D" parent="." unique_id=1702571353]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_bssty")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos" unique_id=1374518471]
+position = Vector2(683.5, 500.5)
+shape = SubResource("RectangleShape2D_e1ko6")
+
+[node name="pinchos2" type="Area2D" parent="." unique_id=1279290246]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_tffuq")
+
+[node name="pinchos2" type="Area2D" parent="pinchos2" unique_id=324844335]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_tffuq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos2/pinchos2" unique_id=1182221596]
+position = Vector2(588, 405)
+shape = SubResource("RectangleShape2D_gqsok")
+
+[node name="pinchos3" type="Area2D" parent="pinchos2" unique_id=112929111]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_tffuq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos2/pinchos3" unique_id=179727130]
+position = Vector2(428.73438, 404.875)
+shape = SubResource("RectangleShape2D_gqsok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos2" unique_id=1320994019]
+position = Vector2(428.73438, 404.875)
+shape = SubResource("RectangleShape2D_gqsok")
+
+[node name="pinchos4" type="Area2D" parent="pinchos2" unique_id=152673541]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_tffuq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos2/pinchos4" unique_id=1728374338]
+position = Vector2(1162, 502)
+shape = SubResource("RectangleShape2D_gqsok")
+
+[node name="pinchos5" type="Area2D" parent="pinchos2" unique_id=385761088]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_tffuq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos2/pinchos5" unique_id=1010819035]
+position = Vector2(1211, 485)
+shape = SubResource("RectangleShape2D_gqsok")
+
+[node name="pinchos6" type="Area2D" parent="pinchos2" unique_id=2007679285]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_tffuq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos2/pinchos6" unique_id=1666672874]
+position = Vector2(1262, 502)
+shape = SubResource("RectangleShape2D_gqsok")
+
+[node name="pinchos7" type="Area2D" parent="pinchos2" unique_id=203043082]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_tffuq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos2/pinchos7" unique_id=1376656865]
+position = Vector2(1643, 485)
+shape = SubResource("RectangleShape2D_gqsok")
+
+[node name="pinchos3" type="Area2D" parent="." unique_id=427304957]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_13usj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos3" unique_id=562170414]
+position = Vector2(1730.7344, 454)
+shape = SubResource("RectangleShape2D_7vw02")
+
+[node name="pinchos4" type="Area2D" parent="pinchos3" unique_id=1822940538]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_13usj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos3/pinchos4" unique_id=100677605]
+position = Vector2(1777, 454)
+shape = SubResource("RectangleShape2D_7vw02")
+
+[node name="pinchos5" type="Area2D" parent="pinchos3" unique_id=1391823667]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_13usj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos3/pinchos5" unique_id=1562499810]
+position = Vector2(1842, 456)
+shape = SubResource("RectangleShape2D_7vw02")
+
+[node name="pinchos6" type="Area2D" parent="pinchos3" unique_id=416403855]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_13usj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos3/pinchos6" unique_id=1756227344]
+position = Vector2(2241, 503)
+shape = SubResource("RectangleShape2D_7vw02")
+
+[node name="pinchos7" type="Area2D" parent="pinchos3" unique_id=1347984321]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_13usj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos3/pinchos7" unique_id=1934017197]
+position = Vector2(4560.9336, 501.25)
+shape = SubResource("RectangleShape2D_7vw02")
+
+[node name="pinchos8" type="Area2D" parent="pinchos3" unique_id=380918837]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_13usj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos3/pinchos8" unique_id=1774712806]
+position = Vector2(4640, 487)
+shape = SubResource("RectangleShape2D_7vw02")
+
+[node name="pinchos9" type="Area2D" parent="pinchos3" unique_id=183705924]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_13usj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos3/pinchos9" unique_id=410909845]
+position = Vector2(5475, 423)
+shape = SubResource("RectangleShape2D_7vw02")
+
+[node name="pinchos10" type="Area2D" parent="pinchos3" unique_id=322037078]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_13usj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos3/pinchos10" unique_id=1872981183]
+position = Vector2(5601, 502)
+shape = SubResource("RectangleShape2D_7vw02")
+
+[node name="pinchos11" type="Area2D" parent="pinchos3" unique_id=2081011171]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_13usj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos3/pinchos11" unique_id=494856522]
+position = Vector2(5635, 471)
+shape = SubResource("RectangleShape2D_7vw02")
+
+[node name="pinchos4" type="Area2D" parent="." unique_id=1673050438]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_e1ko6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos4" unique_id=1435434413]
+position = Vector2(1897.4375, 453.375)
+shape = SubResource("RectangleShape2D_tffuq")
+
+[node name="pinchos5" type="Area2D" parent="pinchos4" unique_id=1741199066]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_e1ko6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos4/pinchos5" unique_id=1216614932]
+position = Vector2(2123, 502)
+shape = SubResource("RectangleShape2D_tffuq")
+
+[node name="pinchos6" type="Area2D" parent="pinchos4" unique_id=1604162289]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_e1ko6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos4/pinchos6" unique_id=765325886]
+position = Vector2(4825, 502)
+shape = SubResource("RectangleShape2D_tffuq")
+
+[node name="pinchos7" type="Area2D" parent="pinchos4" unique_id=1569850520]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_e1ko6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos4/pinchos7" unique_id=1340461964]
+position = Vector2(5081, 502)
+shape = SubResource("RectangleShape2D_tffuq")
+
+[node name="pinchos8" type="Area2D" parent="pinchos4" unique_id=2061276974]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_e1ko6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos4/pinchos8" unique_id=28047432]
+position = Vector2(5738, 375)
+shape = SubResource("RectangleShape2D_tffuq")
+
+[node name="pinchos5" type="Area2D" parent="." unique_id=671824069]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_gqsok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos5" unique_id=1091536468]
+position = Vector2(3931.9688, 551.375)
+shape = SubResource("RectangleShape2D_13usj")
+
+[node name="pinchos6" type="Area2D" parent="." unique_id=1247790148]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_7vw02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos6" unique_id=609059305]
+position = Vector2(3098.0059, 502)
+shape = SubResource("RectangleShape2D_36rfh")
+
+[node name="pinchos7" type="Area2D" parent="." unique_id=1626719772]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_b5csk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos7" unique_id=1931896611]
+position = Vector2(3338.7031, 486.1875)
+shape = SubResource("RectangleShape2D_7o7l4")
+
+[node name="pinchos9" type="Area2D" parent="pinchos7" unique_id=148202849]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_b5csk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos7/pinchos9" unique_id=228178865]
+position = Vector2(3962, 423)
+shape = SubResource("RectangleShape2D_7o7l4")
+
+[node name="pinchos10" type="Area2D" parent="pinchos7/pinchos9" unique_id=1061758341]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_b5csk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos7/pinchos9/pinchos10" unique_id=1665257831]
+position = Vector2(4059, 422)
+shape = SubResource("RectangleShape2D_7o7l4")
+
+[node name="pinchos8" type="Area2D" parent="." unique_id=461580702]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_c4f0x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos8" unique_id=1208291355]
+position = Vector2(3466.5313, 470.5)
+shape = SubResource("RectangleShape2D_p4d7c")
+
+[node name="pinchos9" type="Area2D" parent="." unique_id=1809206280]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_c4asx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos9" unique_id=1605602936]
+position = Vector2(3584.7188, 390)
+shape = SubResource("RectangleShape2D_dyfn7")
+
+[node name="pinchos10" type="Area2D" parent="." unique_id=1179980766]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_c4asx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos10" unique_id=779483030]
+position = Vector2(5984, 440)
+shape = SubResource("RectangleShape2D_dyfn7")
+
+[node name="pinchos11" type="Area2D" parent="." unique_id=292741059]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_r076f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos11" unique_id=951062274]
+position = Vector2(4256.8438, 502.75)
+shape = SubResource("RectangleShape2D_5tsl7")
+
+[node name="pinchos12" type="Area2D" parent="." unique_id=2036637857]
+collision_layer = 4
+collision_mask = 5
+script = SubResource("GDScript_r076f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos12" unique_id=30260837]
+position = Vector2(5331, 502)
+shape = SubResource("RectangleShape2D_5tsl7")
+
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D2/Area2D2" to="Area2D2/Area2D2" method="_on_body_entered"]
 [connection signal="finished" from="audio_fondo" to="audio_fondo" method="_on_finished"]
+[connection signal="body_entered" from="pinchos" to="pinchos" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos2" to="pinchos2" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos2/pinchos2" to="pinchos2/pinchos2" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos2/pinchos3" to="pinchos2/pinchos3" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos2/pinchos4" to="pinchos2/pinchos4" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos2/pinchos5" to="pinchos2/pinchos5" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos2/pinchos6" to="pinchos2/pinchos6" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos2/pinchos7" to="pinchos2/pinchos7" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos3" to="pinchos3" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos3/pinchos4" to="pinchos3/pinchos4" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos3/pinchos5" to="pinchos3/pinchos5" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos3/pinchos6" to="pinchos3/pinchos6" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos3/pinchos7" to="pinchos3/pinchos7" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos3/pinchos8" to="pinchos3/pinchos8" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos3/pinchos9" to="pinchos3/pinchos9" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos3/pinchos10" to="pinchos3/pinchos10" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos3/pinchos11" to="pinchos3/pinchos11" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos4" to="pinchos4" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos4/pinchos5" to="pinchos4/pinchos5" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos4/pinchos6" to="pinchos4/pinchos6" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos4/pinchos7" to="pinchos4/pinchos7" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos4/pinchos8" to="pinchos4/pinchos8" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos5" to="pinchos5" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos6" to="pinchos6" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos7" to="pinchos7" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos7/pinchos9" to="pinchos7/pinchos9" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos7/pinchos9/pinchos10" to="pinchos7/pinchos9/pinchos10" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos8" to="pinchos8" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos9" to="pinchos9" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos10" to="pinchos10" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos11" to="pinchos11" method="_on_body_entered"]
+[connection signal="body_entered" from="pinchos12" to="pinchos12" method="_on_body_entered"]

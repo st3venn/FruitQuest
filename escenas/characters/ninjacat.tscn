@@ -509,12 +509,15 @@ polygon = PackedVector2Array(-10.716448, -1.2014828, -10.788689, -3.7014177, -5.
 
 [node name="audio_jump" type="AudioStreamPlayer2D" parent="." unique_id=1986470250]
 stream = ExtResource("11_1r64d")
+bus = &"Sonidobus"
 
 [node name="audioDoublejump" type="AudioStreamPlayer2D" parent="." unique_id=93683005]
 stream = ExtResource("12_q3g6m")
+bus = &"Sonidobus"
 
 [node name="audioDamage" type="AudioStreamPlayer2D" parent="." unique_id=182838589]
 stream = ExtResource("13_5jme2")
+bus = &"Sonidobus"
 
 [connection signal="animation_finished" from="animaciones" to="." method="_on_animaciones_animation_finished"]
 [connection signal="timeout" from="coyote_timer" to="." method="_on_coyote_timer_timeout"]

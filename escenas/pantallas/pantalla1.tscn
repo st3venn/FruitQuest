@@ -126,9 +126,11 @@ position = Vector2(2610, 194)
 shape = SubResource("RectangleShape2D_3g6fp")
 
 [node name="audio_fondo" type="AudioStreamPlayer" parent="." unique_id=966196380]
+process_mode = 3
 stream = ExtResource("8_suyv3")
 volume_db = -16.421
 autoplay = true
+bus = &"musicabus"
 script = ExtResource("9_plxbb")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

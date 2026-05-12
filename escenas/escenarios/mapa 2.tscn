@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c1b1yyecal5bg" path="res://assets/Free/Traps/Spikes/Idle.png" id="2_nv6fk"]
 [ext_resource type="Texture2D" uid="uid://b3v23b3kfmc7y" path="res://escenas/escenarios/fondomapa2.png" id="3_ko0e1"]
 [ext_resource type="PackedScene" uid="uid://b3e21iyuxj8g" path="res://escenas/escenarios/fruit.tscn" id="4_ltv4i"]
+[ext_resource type="Script" uid="uid://cimtkodp7212a" path="res://escenas/pantallas/siguientenivel.gd" id="5_joc5j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gb4ua"]
 texture = ExtResource("1_gb4ua")
@@ -204,6 +205,9 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_gb4ua")
 sources/1 = SubResource("TileSetAtlasSource_ko0e1")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lffku"]
+size = Vector2(21.25, 18)
+
 [node name="TileMap" type="TileMap" unique_id=474059689]
 tile_set = SubResource("TileSet_nv6fk")
 format = 2
@@ -385,3 +389,26 @@ position = Vector2(5809, 155)
 
 [node name="fruit50" parent="." unique_id=116212693 instance=ExtResource("4_ltv4i")]
 position = Vector2(6168, 284)
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1431549464]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("5_joc5j")
+next_scene_path = "res://escenas/pantallas/pantalla3.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=698467648]
+position = Vector2(6152, 422)
+shape = SubResource("RectangleShape2D_lffku")
+
+[node name="Area2D2" type="Area2D" parent="Area2D2" unique_id=863470071]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("5_joc5j")
+next_scene_path = "res://escenas/pantallas/pantalla3.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2/Area2D2" unique_id=888005526]
+position = Vector2(6407, 428)
+shape = SubResource("RectangleShape2D_lffku")
+
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D2/Area2D2" to="Area2D2/Area2D2" method="_on_body_entered"]

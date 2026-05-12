@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cd41woj0pbi3i" path="res://escenas/enemigos/spike_ball.tscn" id="5_byhf8"]
 [ext_resource type="PackedScene" uid="uid://bifhpjfg00vg6" path="res://escenas/pantallas/playerinfo.tscn" id="6_yjn75"]
 [ext_resource type="Script" uid="uid://cimtkodp7212a" path="res://escenas/pantallas/siguientenivel.gd" id="7_l4qrl"]
+[ext_resource type="AudioStream" uid="uid://kqc16cldw1jj" path="res://sonidos/pixel-song-19-31953_junta.mp3" id="8_bssty"]
+[ext_resource type="Script" uid="uid://cyp28c8beplgm" path="res://escenas/pantallas/audio_fondo.gd" id="9_e1ko6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cukit"]
 size = Vector2(21.25, 18)
@@ -56,7 +58,7 @@ script = ExtResource("7_l4qrl")
 next_scene_path = "res://escenas/pantallas/pantalla3.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=875917493]
-position = Vector2(6153.375, 423)
+position = Vector2(6152, 422)
 shape = SubResource("RectangleShape2D_cukit")
 
 [node name="Area2D2" type="Area2D" parent="Area2D2" unique_id=1861823560]
@@ -66,8 +68,17 @@ script = ExtResource("7_l4qrl")
 next_scene_path = "res://escenas/pantallas/pantalla3.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2/Area2D2" unique_id=1167426551]
-position = Vector2(6408, 425)
+position = Vector2(6407, 428)
 shape = SubResource("RectangleShape2D_cukit")
+
+[node name="audio_fondo" type="AudioStreamPlayer" parent="." unique_id=1368739848]
+process_mode = 3
+stream = ExtResource("8_bssty")
+volume_db = -16.421
+autoplay = true
+bus = &"musicabus"
+script = ExtResource("9_e1ko6")
 
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D2/Area2D2" to="Area2D2/Area2D2" method="_on_body_entered"]
+[connection signal="finished" from="audio_fondo" to="audio_fondo" method="_on_finished"]

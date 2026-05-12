@@ -7,9 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://cd41woj0pbi3i" path="res://escenas/enemigos/spike_ball.tscn" id="5_m3dfu"]
 [ext_resource type="PackedScene" uid="uid://bifhpjfg00vg6" path="res://escenas/pantallas/playerinfo.tscn" id="6_8n2vf"]
 [ext_resource type="Script" uid="uid://cimtkodp7212a" path="res://escenas/pantallas/siguientenivel.gd" id="7_ubml5"]
+[ext_resource type="AudioStream" uid="uid://kqc16cldw1jj" path="res://sonidos/pixel-song-19-31953_junta.mp3" id="8_pmhrg"]
+[ext_resource type="Script" uid="uid://cyp28c8beplgm" path="res://escenas/pantallas/audio_fondo.gd" id="9_h1w80"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uicjo"]
-size = Vector2(17, 22)
+size = Vector2(29, 25)
 
 [node name="Node2D" type="Node2D" unique_id=1322925109]
 position = Vector2(0, -413)
@@ -26,33 +28,42 @@ position = Vector2(296, 175)
 
 [node name="fruit" parent="." unique_id=861061347 instance=ExtResource("3_3hik7")]
 position = Vector2(294, 322)
+fruitType = "banana"
 
 [node name="fruit2" parent="." unique_id=1910988828 instance=ExtResource("3_3hik7")]
 position = Vector2(293, 380)
+fruitType = "cherry"
 
 [node name="fruit3" parent="." unique_id=1187931985 instance=ExtResource("3_3hik7")]
 position = Vector2(449, 250)
 
 [node name="fruit4" parent="." unique_id=1877243694 instance=ExtResource("3_3hik7")]
 position = Vector2(451, 214)
+fruitType = "banana"
 
 [node name="fruit5" parent="." unique_id=1742074680 instance=ExtResource("3_3hik7")]
 position = Vector2(810, 253)
+fruitType = "banana"
 
 [node name="fruit6" parent="." unique_id=230133251 instance=ExtResource("3_3hik7")]
 position = Vector2(847, 253)
+fruitType = "cherry"
 
 [node name="fruit7" parent="." unique_id=33705506 instance=ExtResource("3_3hik7")]
 position = Vector2(708, 127)
+fruitType = "cherry"
 
 [node name="fruit8" parent="." unique_id=1880930207 instance=ExtResource("3_3hik7")]
 position = Vector2(644, 71)
+fruitType = "banana"
 
 [node name="fruit9" parent="." unique_id=848403785 instance=ExtResource("3_3hik7")]
 position = Vector2(570, 113)
+fruitType = "banana"
 
 [node name="fruit10" parent="." unique_id=487844247 instance=ExtResource("3_3hik7")]
 position = Vector2(288, 858)
+fruitType = "banana"
 
 [node name="fruit11" parent="." unique_id=227234017 instance=ExtResource("3_3hik7")]
 position = Vector2(385, 815)
@@ -65,18 +76,22 @@ position = Vector2(566, 908)
 
 [node name="fruit14" parent="." unique_id=834990691 instance=ExtResource("3_3hik7")]
 position = Vector2(860, 783)
+fruitType = "cherry"
 
 [node name="fruit15" parent="." unique_id=2132767593 instance=ExtResource("3_3hik7")]
 position = Vector2(1169, 837)
+fruitType = "cherry"
 
 [node name="fruit16" parent="." unique_id=738843209 instance=ExtResource("3_3hik7")]
 position = Vector2(1496, 824)
+fruitType = "banana"
 
 [node name="fruit17" parent="." unique_id=1417755980 instance=ExtResource("3_3hik7")]
 position = Vector2(1748, 861)
 
 [node name="fruit18" parent="." unique_id=950418403 instance=ExtResource("3_3hik7")]
 position = Vector2(1824, 854)
+fruitType = "cherry"
 
 [node name="fruit19" parent="." unique_id=1820116984 instance=ExtResource("3_3hik7")]
 position = Vector2(1711, 927)
@@ -95,24 +110,35 @@ position = Vector2(1636, 415)
 
 [node name="fruit24" parent="." unique_id=2033171298 instance=ExtResource("3_3hik7")]
 position = Vector2(1438, 368)
+fruitType = "banana"
 
 [node name="fruit25" parent="." unique_id=1672982366 instance=ExtResource("3_3hik7")]
 position = Vector2(1108, 250)
+fruitType = "cherry"
 
 [node name="fruit26" parent="." unique_id=81927924 instance=ExtResource("3_3hik7")]
 position = Vector2(972, 345)
+fruitType = "cherry"
 
 [node name="fruit27" parent="." unique_id=1092879544 instance=ExtResource("3_3hik7")]
 position = Vector2(213, 784)
+fruitType = "banana"
 
 [node name="fruit28" parent="." unique_id=1509696135 instance=ExtResource("3_3hik7")]
 position = Vector2(186, 618)
+fruitType = "banana"
 
 [node name="fruit29" parent="." unique_id=914599873 instance=ExtResource("3_3hik7")]
 position = Vector2(206, 702)
+fruitType = "banana"
 
 [node name="fruit30" parent="." unique_id=1890466841 instance=ExtResource("3_3hik7")]
 position = Vector2(114, 408)
+fruitType = "cherry"
+
+[node name="fruit31" parent="." unique_id=530413539 instance=ExtResource("3_3hik7")]
+position = Vector2(676, 529)
+scale = Vector2(2.25, 2.25)
 
 [node name="SpikeBall" parent="." unique_id=1361933566 instance=ExtResource("5_m3dfu")]
 position = Vector2(1457, 429)
@@ -129,7 +155,16 @@ script = ExtResource("7_ubml5")
 next_scene_path = "res://escenas/pantallas/pantalla3.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerinfo/Area2D2" unique_id=1023245493]
-position = Vector2(185.5, 205)
+position = Vector2(676.5, 116.5)
 shape = SubResource("RectangleShape2D_uicjo")
 
+[node name="audio_fondo" type="AudioStreamPlayer" parent="." unique_id=1242894398]
+process_mode = 3
+stream = ExtResource("8_pmhrg")
+volume_db = -16.421
+autoplay = true
+bus = &"musicabus"
+script = ExtResource("9_h1w80")
+
 [connection signal="body_entered" from="playerinfo/Area2D2" to="playerinfo/Area2D2" method="_on_body_entered"]
+[connection signal="finished" from="audio_fondo" to="audio_fondo" method="_on_finished"]

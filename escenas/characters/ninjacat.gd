@@ -115,5 +115,6 @@ func _on_damage_detection_area_shape_entered(_area_rid, _area, _area_shape_index
 func _on_muerte_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	health -= 100
 	if health <= 0:
+		Global.current_scene = get_tree().current_scene.scene_file_path
 		get_tree().change_scene_to_file("res://escenas/MENU/gameover.tscn")
 	print("daño")

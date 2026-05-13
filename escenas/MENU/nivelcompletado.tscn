@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://6vti8muy2nvs"]
+
+[ext_resource type="Texture2D" uid="uid://bh4mjaiokey1w" path="res://escenas/MENU/nivelcompletado.png" id="1_4dxes"]
+[ext_resource type="Script" uid="uid://b0f54yawqbte7" path="res://escenas/MENU/nivelcompletado.gd" id="1_fgegu"]
+
+[node name="nivelcompletado" type="Control" unique_id=488453928]
+layout_mode = 3
+anchor_right = 0.99700004
+anchor_bottom = 1.0
+offset_right = 0.45593262
+offset_bottom = 1.0
+script = ExtResource("1_fgegu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=29442440]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.56078434, 0.7647059, 0.99607843, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=1366416016]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4dxes")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=16301401]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 356.0
+offset_right = 334.0
+offset_bottom = 405.0
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=1871589339]
+layout_mode = 2
+text = "PUNTUACIÓN:"
+
+[node name="siguientenivel" type="Button" parent="." unique_id=787082367]
+layout_mode = 0
+offset_left = 868.0
+offset_top = 349.0
+offset_right = 1049.0
+offset_bottom = 412.0
+text = "SIGUIENTE NIVEL"
+
+[node name="salir" type="Button" parent="." unique_id=1905985795]
+layout_mode = 0
+offset_left = 868.0
+offset_top = 460.0
+offset_right = 1050.0
+offset_bottom = 524.0
+text = "SALIR"
+
+[connection signal="pressed" from="siguientenivel" to="." method="_on_siguientenivel_pressed"]
+[connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]

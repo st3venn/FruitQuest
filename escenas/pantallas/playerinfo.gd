@@ -8,6 +8,7 @@ func _ready():
 	if get_parent().has_node("ninjacat"):
 		$health_ProgressBar.value = get_parent().get_node("ninjacat").health
 		$FruitPointLabel.text = "Frutas:" + str(get_parent().get_node("ninjacat").fruitCount)
+@warning_ignore("unused_parameter")
 func _process(delta):
 	$health_ProgressBar.value = get_parent().get_node("ninjacat").health
 	$FruitPointLabel.text = "Frutas:" + str(get_parent().get_node("ninjacat").fruitCount)

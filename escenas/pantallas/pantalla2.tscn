@@ -403,7 +403,7 @@ collision_mask = 5
 script = SubResource("GDScript_gqsok")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pinchos5" unique_id=1091536468]
-position = Vector2(4214.4688, 550.875)
+position = Vector2(4217.4688, 550.875)
 shape = SubResource("RectangleShape2D_13usj")
 
 [node name="pinchos6" type="Area2D" parent="." unique_id=1247790148]

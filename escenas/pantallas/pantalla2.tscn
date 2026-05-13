@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dajsb5t8xywt8"]
 
+[ext_resource type="Script" uid="uid://ch34061xphdx" path="res://escenas/pantallas/pantalla_2.gd" id="1_e1ko6"]
 [ext_resource type="PackedScene" uid="uid://tnn1a48mfafh" path="res://escenas/enemigos/sierra.tscn" id="1_hiyro"]
 [ext_resource type="PackedScene" uid="uid://c2j73aka5k1rl" path="res://escenas/characters/ninjacat.tscn" id="2_lt5qp"]
 [ext_resource type="PackedScene" uid="uid://bqsj3fl4xx7wg" path="res://escenas/escenarios/mapa 2.tscn" id="2_qjidq"]
@@ -133,8 +134,9 @@ func _on_area_2d_body_entered(body):
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5tsl7"]
 size = Vector2(90.3125, 7.5)
 
-[node name="Node2D" type="Node2D" unique_id=2140849104]
+[node name="pantalla2" type="Node2D" unique_id=2140849104]
 position = Vector2(0, 33)
+script = ExtResource("1_e1ko6")
 
 [node name="TileMap" parent="." unique_id=474059689 instance=ExtResource("2_qjidq")]
 top_level = true
@@ -153,7 +155,7 @@ position = Vector2(2554, 509)
 [node name="sierra2" parent="." unique_id=602374408 instance=ExtResource("1_hiyro")]
 position = Vector2(1077, 508)
 
-[node name="fruit4" parent="." unique_id=1397616176 instance=ExtResource("3_qjidq")]
+[node name="fruit4" parent="." unique_id=1397616176 groups=["frutas"] instance=ExtResource("3_qjidq")]
 position = Vector2(6409, 423)
 fruitType = "cherry"
 

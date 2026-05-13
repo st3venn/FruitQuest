@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://e00vm43fc26h"]
 
+[ext_resource type="Script" uid="uid://cnn0nuiw8stwt" path="res://escenas/pantallas/pantalla_1.gd" id="1_plxbb"]
 [ext_resource type="PackedScene" uid="uid://cjjkx41raprfy" path="res://escenas/escenarios/mapa 1.tscn" id="2_dx68v"]
 [ext_resource type="PackedScene" uid="uid://b3e21iyuxj8g" path="res://escenas/escenarios/fruit.tscn" id="3_dx68v"]
 [ext_resource type="PackedScene" uid="uid://c2j73aka5k1rl" path="res://escenas/characters/ninjacat.tscn" id="3_iioxt"]
@@ -26,6 +27,7 @@ size = Vector2(1630.5, 20)
 size = Vector2(11.125, 13)
 
 [node name="pantalla1" type="Node2D" unique_id=18950095]
+script = ExtResource("1_plxbb")
 
 [node name="CanvasLayer" parent="." unique_id=1886381284 instance=ExtResource("6_y7j5o")]
 
@@ -41,76 +43,76 @@ position = Vector2(1262, -82)
 [node name="SpikeBall2" parent="." unique_id=1043773523 instance=ExtResource("5_il1dr")]
 position = Vector2(2155, 77)
 
-[node name="fruit" parent="." unique_id=861061347 instance=ExtResource("3_dx68v")]
+[node name="fruit" parent="." unique_id=861061347 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(766, 277)
 
-[node name="fruit2" parent="." unique_id=964183916 instance=ExtResource("3_dx68v")]
+[node name="fruit2" parent="." unique_id=964183916 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(548, 257)
 fruitType = "banana"
 
-[node name="fruit4" parent="." unique_id=84036115 instance=ExtResource("3_dx68v")]
+[node name="fruit4" parent="." unique_id=84036115 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(1937, 138)
 
-[node name="fruit3" parent="." unique_id=560984082 instance=ExtResource("3_dx68v")]
+[node name="fruit3" parent="." unique_id=560984082 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(1583, 9)
 fruitType = "cherry"
 
-[node name="fruit5" parent="." unique_id=778803825 instance=ExtResource("3_dx68v")]
+[node name="fruit5" parent="." unique_id=778803825 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(1864.0001, 139)
 
-[node name="fruit6" parent="." unique_id=700505063 instance=ExtResource("3_dx68v")]
+[node name="fruit6" parent="." unique_id=700505063 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(1902, 139)
 
-[node name="fruit7" parent="." unique_id=1783570522 instance=ExtResource("3_dx68v")]
+[node name="fruit7" parent="." unique_id=1783570522 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(1883, 105)
 fruitType = "banana"
 
-[node name="fruit8" parent="." unique_id=575847043 instance=ExtResource("3_dx68v")]
+[node name="fruit8" parent="." unique_id=575847043 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(1923, 104)
 fruitType = "banana"
 
-[node name="fruit9" parent="." unique_id=713694625 instance=ExtResource("3_dx68v")]
+[node name="fruit9" parent="." unique_id=713694625 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(2078, 187)
 fruitType = "cherry"
 
-[node name="fruit10" parent="." unique_id=1330786941 instance=ExtResource("3_dx68v")]
+[node name="fruit10" parent="." unique_id=1330786941 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(2111, 235)
 fruitType = "cherry"
 
-[node name="fruit11" parent="." unique_id=1674356251 instance=ExtResource("3_dx68v")]
+[node name="fruit11" parent="." unique_id=1674356251 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(2134, 290)
 fruitType = "cherry"
 
-[node name="fruit12" parent="." unique_id=1640353525 instance=ExtResource("3_dx68v")]
+[node name="fruit12" parent="." unique_id=1640353525 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(2159, 357)
 fruitType = "cherry"
 
-[node name="fruit13" parent="." unique_id=980470792 instance=ExtResource("3_dx68v")]
+[node name="fruit13" parent="." unique_id=980470792 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(912, 203)
 
-[node name="fruit14" parent="." unique_id=701492218 instance=ExtResource("3_dx68v")]
+[node name="fruit14" parent="." unique_id=701492218 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(911, 163)
 
-[node name="fruit15" parent="." unique_id=219918609 instance=ExtResource("3_dx68v")]
+[node name="fruit15" parent="." unique_id=219918609 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(419.99997, 346)
 fruitType = "banana"
 
-[node name="fruit16" parent="." unique_id=568388232 instance=ExtResource("3_dx68v")]
+[node name="fruit16" parent="." unique_id=568388232 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(2351, 515)
 
-[node name="fruit17" parent="." unique_id=1675474077 instance=ExtResource("3_dx68v")]
+[node name="fruit17" parent="." unique_id=1675474077 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(2353, 558)
 fruitType = "banana"
 
-[node name="fruit18" parent="." unique_id=1031150744 instance=ExtResource("3_dx68v")]
+[node name="fruit18" parent="." unique_id=1031150744 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(2510, 420)
 fruitType = "banana"
 
-[node name="fruit19" parent="." unique_id=1874214550 instance=ExtResource("3_dx68v")]
+[node name="fruit19" parent="." unique_id=1874214550 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(2611, 191)
 fruitType = "cherry"
 
-[node name="fruit20" parent="." unique_id=1470116172 instance=ExtResource("3_dx68v")]
+[node name="fruit20" parent="." unique_id=1470116172 groups=["frutas"] instance=ExtResource("3_dx68v")]
 position = Vector2(2697, 374)
 
 [node name="TileMap" parent="." unique_id=1150383447 instance=ExtResource("2_dx68v")]

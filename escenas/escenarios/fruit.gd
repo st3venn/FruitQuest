@@ -11,7 +11,6 @@ var collected = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if not Engine.is_editor_hint():
-		Global.total_fruits += 1
 		print("Frutas totales: ", Global.total_fruits)
 		$animations.play(fruitType)
 

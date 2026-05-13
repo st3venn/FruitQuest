@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="PROJECTO BUENO"
-run/main_scene="uid://e00vm43fc26h"
+run/main_scene="uid://dovi1radnfasl"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

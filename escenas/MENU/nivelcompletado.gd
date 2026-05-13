@@ -2,7 +2,8 @@ extends Control
 
 func _ready():
 	$PanelContainer/Label.text = "puntuación:" + str(Global.puntuacion)
-	
+	get_tree().paused = false
+	$audionivelcompletado.play()
 
 	
 

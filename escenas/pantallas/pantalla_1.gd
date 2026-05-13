@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-
+	Global.current_level = 1
 	Global.total_fruits = 0
 	Global.collected_fruits = 0
 

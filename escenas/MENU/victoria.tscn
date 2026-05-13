@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://l8mv8f883ljo"]
+
+[ext_resource type="Script" uid="uid://doyu55q63sj1j" path="res://escenas/MENU/victoria.gd" id="1_s57me"]
+[ext_resource type="Texture2D" uid="uid://4nkblsrjri4u" path="res://escenas/MENU/victoria.jpg" id="2_6lhnu"]
+[ext_resource type="AudioStream" uid="uid://cxevdl2p4wgau" path="res://sonidos/u_it78ck90s3-orchestral-win-331233.mp3" id="3_6lhnu"]
+
+[node name="victoria" type="Control" unique_id=1828105554]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s57me")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=108128720]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.56078434, 0.7647059, 0.99607843, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=999652472]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6lhnu")
+expand_mode = 1
+
+[node name="Reiniciar3" type="Button" parent="ColorRect/TextureRect" unique_id=947414112]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 382.0
+offset_right = 320.0
+offset_bottom = 442.0
+text = "REINICIAR JUEGO"
+
+[node name="salir" type="Button" parent="ColorRect/TextureRect" unique_id=565532269]
+layout_mode = 0
+offset_left = 854.0
+offset_top = 396.0
+offset_right = 1108.0
+offset_bottom = 456.0
+text = "SALIR"
+
+[node name="audiovictoria" type="AudioStreamPlayer2D" parent="." unique_id=411795184]
+stream = ExtResource("3_6lhnu")
+
+[connection signal="pressed" from="ColorRect/TextureRect/Reiniciar3" to="." method="_on_reiniciar_3_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/salir" to="." method="_on_salir_pressed"]

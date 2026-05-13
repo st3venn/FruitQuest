@@ -7,3 +7,5 @@ var current_scene: String = ""
 
 var frutas_recogidas = 0
 var puntuacion = 0
+
+var current_level = 1

@@ -37,7 +37,7 @@ func _physics_process(delta):
 		if count_jumps == 1:
 			allow_animation = false
 			$animaciones.play("double_jump")
-			$audioDoublejump.play()
+			$audiodoblesalto.play()
 		else:
 			$audio_jump.play()
 		count_jumps += 1
@@ -89,7 +89,7 @@ func collectFruit(fruitType):
 	var gainedPoints = GeneralRules[auxString]
 	fruitCount += gainedPoints
 	print(fruitCount)
-	$audioDoublejump.play()
+	$audiorecolectar.play()
 
 func _on_animaciones_animation_finished():
 	allow_animation = true

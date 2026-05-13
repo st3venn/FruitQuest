@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://j531qpq4oiob" path="res://escenas/MENU/gameover.gd" id="1_vlnjk"]
 [ext_resource type="Texture2D" uid="uid://csxv2d05a40nb" path="res://escenas/MENU/game over.png" id="2_b2yda"]
+[ext_resource type="AudioStream" uid="uid://cds7vlarmlnem" path="res://sonidos/8-bit-video-game-lose-sound-version-1-145828.mp3" id="3_b2yda"]
 
 [node name="gameover" type="Control" unique_id=1828105554]
 layout_mode = 3
@@ -52,6 +53,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 50
 text = "SALIR"
+
+[node name="sonidogameover" type="AudioStreamPlayer2D" parent="." unique_id=983587018]
+process_mode = 3
+stream = ExtResource("3_b2yda")
 
 [connection signal="pressed" from="ColorRect/reiniciar2" to="." method="_on_reiniciar_2_pressed"]
 [connection signal="pressed" from="ColorRect/salir" to="." method="_on_salir_pressed"]

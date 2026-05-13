@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://iwo4h6xau1su" path="res://escenas/MENU/menu.gd" id="1_svopc"]
 [ext_resource type="Texture2D" uid="uid://bwfhdtxghblr1" path="res://escenas/MENU/fruitquest.png" id="2_svopc"]
+[ext_resource type="AudioStream" uid="uid://c3mcau1rjw4fa" path="res://sonidos/freesound_community-ambient-game-67014.mp3" id="3_1ogui"]
 
 [node name="menu" type="Control" unique_id=1462004538]
 layout_mode = 3
@@ -58,6 +59,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 50
 text = "SALIR"
+
+[node name="sonidomenu" type="AudioStreamPlayer2D" parent="." unique_id=279854009]
+process_mode = 3
+stream = ExtResource("3_1ogui")
 
 [connection signal="pressed" from="ColorRect/VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/salir" to="." method="_on_salir_pressed"]

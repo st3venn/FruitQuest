@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bh4mjaiokey1w" path="res://escenas/MENU/nivelcompletado.png" id="1_4dxes"]
 [ext_resource type="Script" uid="uid://b0f54yawqbte7" path="res://escenas/MENU/nivelcompletado.gd" id="1_fgegu"]
+[ext_resource type="AudioStream" uid="uid://bofe8pj753wee" path="res://sonidos/freesound_community-level-win-6416.mp3" id="3_goepn"]
 
 [node name="nivelcompletado" type="Control" unique_id=488453928]
 layout_mode = 3
@@ -56,6 +57,9 @@ offset_top = 460.0
 offset_right = 1050.0
 offset_bottom = 524.0
 text = "SALIR"
+
+[node name="audionivelcompletado" type="AudioStreamPlayer2D" parent="." unique_id=10505211]
+stream = ExtResource("3_goepn")
 
 [connection signal="pressed" from="siguientenivel" to="." method="_on_siguientenivel_pressed"]
 [connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]

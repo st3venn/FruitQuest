@@ -31,7 +31,10 @@ func _on_area_collect_body_entered(body):
 		Global.puntuacion = body.fruitCount
 		Global.frutas_recogidas = Global.collected_fruits
 		Global.current_scene = get_tree().current_scene.scene_file_path
-		get_tree().change_scene_to_file("res://escenas/MENU/nivelcompletado.tscn")
+		if Global.current_level == 3:
+			get_tree().change_scene_to_file("res://escenas/MENU/victoria.tscn")
+		else:
+			get_tree().change_scene_to_file("res://escenas/MENU/nivelcompletado.tscn")
 	
 	if body.has_method("collectFruit"):
 		body.collectFruit(fruitType)

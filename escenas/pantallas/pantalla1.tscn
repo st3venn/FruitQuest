@@ -132,7 +132,6 @@ shape = SubResource("RectangleShape2D_j2hlt")
 collision_layer = 16
 collision_mask = 16
 script = ExtResource("7_3g6fp")
-next_scene_path = "res://escenas/pantallas/pantalla2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1194353007]
 position = Vector2(2698, 376)
@@ -142,7 +141,6 @@ shape = SubResource("RectangleShape2D_3g6fp")
 collision_layer = 16
 collision_mask = 16
 script = ExtResource("7_3g6fp")
-next_scene_path = "res://escenas/pantallas/pantalla2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=446685889]
 position = Vector2(2610, 194)

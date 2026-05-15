@@ -13,6 +13,8 @@ var had_jump: bool = false
 var max_jumps: int = 2
 var count_jumps: int = 0
 
+
+
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():

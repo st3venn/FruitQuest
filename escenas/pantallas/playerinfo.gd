@@ -13,6 +13,10 @@ func _process(delta):
 	$health_ProgressBar.value = get_parent().get_node("ninjacat").health
 	$FruitPointLabel.text = "Frutas:" + str(get_parent().get_node("ninjacat").fruitCount)
 
+func _input(event):
+	if event.is_action_pressed("pausa"):
+		get_tree().paused = !get_tree().paused
+		menuPopUp.visible = get_tree().paused
 
 func _on_menu_button_pressed():
 	get_tree().paused = true

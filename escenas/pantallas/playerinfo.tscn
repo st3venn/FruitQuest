@@ -45,6 +45,7 @@ offset_bottom = 33.0
 text = "MENU"
 
 [node name="MenuPopUp" type="Node2D" parent="." unique_id=234354776]
+process_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="MenuPopUp" unique_id=1393070508]
 offset_left = 491.0

@@ -210,7 +210,6 @@ position = Vector2(1773, 301)
 position = Vector2(1246, 628)
 
 [node name="playerinfo" parent="." unique_id=1886381284 instance=ExtResource("6_8n2vf")]
-visible = false
 
 [node name="audio_fondo" type="AudioStreamPlayer" parent="." unique_id=1242894398]
 process_mode = 3

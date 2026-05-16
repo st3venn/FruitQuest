@@ -53,7 +53,7 @@ El proyecto está organizado mediante escenas independientes:
 | Movimiento Izquierda | Flecha Izquierda |
 | Movimiento Derecha | Flecha Derecha |
 | Salto | Espacio |
-| Salir | click a "menu"|
+| Pausa | tecla ESC |
 
 ---
 
